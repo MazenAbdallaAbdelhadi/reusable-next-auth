@@ -33,7 +33,7 @@ export const NewVerificationForm = () => {
   }, [token]);
 
   useEffect(() => {
-    return () => onSubmit();
+    onSubmit();
   }, [onSubmit]);
 
   return (
