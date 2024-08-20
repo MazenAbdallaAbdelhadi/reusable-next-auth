@@ -3,9 +3,7 @@
 import { useSession } from "next-auth/react";
 
 export const useCurrentUser = () => {
-  const session = useSession({required: true});
-
-  console.log("session from hook", { session });
+  const session = useSession({ required: true });
 
   return session.data?.user;
 };
