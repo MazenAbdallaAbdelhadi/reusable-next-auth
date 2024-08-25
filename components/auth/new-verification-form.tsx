@@ -14,7 +14,7 @@ export const NewVerificationForm = () => {
   const [success, setSuccess] = useState<string | undefined>();
 
   const searchParams = useSearchParams();
-  const token = searchParams.get("token");
+  const token = searchParams?.get("token");
 
   const onSubmit = useCallback(() => {
     if (!token) {
@@ -40,7 +40,7 @@ export const NewVerificationForm = () => {
     <CardWrapper
       headerLabel="Confirming your verification"
       backButtonLabel="Back to login"
-      backButtonHref="/auth/login"
+      backButtonHref="/login"
     >
       <div className="flex justify-center items-center ">
         <BounceLoader color="#34d399" loading={!success && !error} />
